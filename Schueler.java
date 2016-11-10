@@ -65,6 +65,7 @@ public class Schueler
     {
         this.gewicht = gewicht;
     }
+
     public void setKoennen(char koennen)
     {
        this.koennen = koennen;
@@ -82,7 +83,7 @@ public class Schueler
 
     public void check ()
     {
-        if (groesse != 0 | groesse > 0)
+        if (groesse > 0)
         {
             System.out.println("√");
         }
@@ -102,26 +103,18 @@ public class Schueler
 
         switch (koennen)
         {
-            case 'A' : if (koennen =='A')
+            case 'A':
             {
                 System.out.println("√");
             }
 
-            else
-            {
-                System.out.println("A hat probleme");
-            }
-            break;
-
-
-            case 'F' :  if (koennen == 'F')
+            case 'F':
             {
                 System.out.println("√");
             }
-            else
-            {
-                System.out.println("F hat probleme");
-            }
+
+            default: System.out.println("Roberto ist ein toller typ!, Können muss auf 'F' oder 'A' sein! ");
+
         }
     }
 }

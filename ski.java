@@ -3,9 +3,9 @@ package AusleihSystem;
 /**
  * Created by jwiczkowski on 08.11.16.
  */
-public class ski
+public class Ski
 {
-    final static float ZEHN_CENTIMETER = 0.10F;  // weil die 10 cm die man abziehen soll immer gleich bleiben :)
+    final float ZEHN_CENTIMETER = 0.10F;  // weil die 10 cm die man abziehen soll immer gleich bleiben :)
     static int anzahlDerObjekte;
     private String hersteller;
     private String modell;
@@ -14,13 +14,13 @@ public class ski
     private int ausleihZeit;
     private boolean defekt;
 
-    public float optimaleSkilaenge(float skiLaenge)
+    public float optimaleSkilaenge()
     {
-        skiLaenge = laenge - ZEHN_CENTIMETER;
-        return skiLaenge;
+        laenge = laenge - ZEHN_CENTIMETER;
+        return laenge;
     }
 
-    ski(String derHersteller, String dasModell, float dieLaenge, char derSkityp)
+    Ski(String derHersteller, String dasModell, float dieLaenge, char derSkityp)
     {
         setHersteller(derHersteller);
         setModell(dasModell);
@@ -28,7 +28,7 @@ public class ski
         setSkityp(derSkityp);
     }
 
-    ski(ski DasOrginal)
+    Ski(Ski DasOrginal)
     {
         setLaenge(DasOrginal.laenge);
         setModell(DasOrginal.modell);
@@ -98,7 +98,7 @@ public class ski
         this.defekt = defekt;
     }
 
-    public void DatenAusgabe()
+    public void datenAusgabe()
     {
         System.out.println("Hersteller ---> " + hersteller);
         System.out.println("Modell  ---> " + modell);
